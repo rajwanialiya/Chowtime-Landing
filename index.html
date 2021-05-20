@@ -50,8 +50,9 @@
     }
     
     .fruits {
-      position: absolute;
+      position: absolute; 
     }
+
 
     .apple {
       top: 20px;
@@ -118,7 +119,7 @@
     }
 
     .google-badge {
-      max-width: 160px;
+      max-width: 180px;
     }
 
     .google-badge > img, .apple-badge > img {
@@ -161,6 +162,33 @@
       transform: rotate(20deg);
     }
 
+    @media screen and (max-width: 900px) {
+      .fruits {
+      display: none;
+      }
+
+      .text {
+        padding:0;
+      }
+
+      .previewContainer {
+        max-width:none;
+      }
+
+      .preview {
+        left: -25%;
+        width: 100%;
+      }
+
+      .preview2 {
+        right: 70%;
+      }
+      
+      body {
+        padding: 10px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -170,7 +198,7 @@
     <h5>Download the app to access hundreds of healthy recipes to cook meals with ingredients you already have. Snap a pic of your fridge and find recipes instantly!</h5>
     <div class="badgeContainer">
       <a href="https://play.google.com/store/apps/details?id=com.itsjustdevs.chowtime" target="_blank" class="google-badge"><img src="./assets/google-play-badge.png"/></a>
-      <a href="https://apps.apple.com/ca/app/chowtime/id1530682514" target="_blank" class="apple-badge"><img src="./assets/app-store-badge.svg"/></a>
+      <a href="https://apps.apple.com/ca/app/chowtime/id1530682514" target="_blank" class="google-badge"><img src="./assets/app-store-badge.png"/></a>
     </div>
     <img class="apple fruits" src="./assets/apple.png"/>
     <img class="pineapple fruits" src="./assets/pineapple.png"/>
