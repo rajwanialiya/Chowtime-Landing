@@ -18,7 +18,7 @@
       align-items: center;
       max-height: 100vh; 
       max-width: 100vw;
-      overflow: hidden;
+
     }
 
     .text {
@@ -169,6 +169,28 @@
 
     a:visited { text-decoration: none; color:white; }
 
+    .display-none {
+      display: none;
+    }
+
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    }
+
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
     @media screen and (max-width: 900px) {
       .fruits {
       display: none;
@@ -203,13 +225,14 @@
     <h1>QuickDish</h1>
     <h3>Previously ChowTime</h3>
     <h5>Download the app to access hundreds of healthy recipes to cook meals with ingredients you already have. Snap a pic of your fridge and find recipes instantly!</h5>
-    <a href="https://drive.google.com/file/d/1J4pSso2cIPS8BqRF4tbh3CfuA-t8SmRr/view?usp=sharing" target"_blank" class="no-styling">
-    <h3>Watch 1-Minute Demo Video</h3>
-    </a>
     
     <div class="badgeContainer">
       <a href="https://play.google.com/store/apps/details?id=com.itsjustdevs.chowtime" target="_blank" class="google-badge"><img src="./assets/google-play-badge.png"/></a>
       <a href="https://apps.apple.com/ca/app/chowtime/id1530682514" target="_blank" class="google-badge"><img src="./assets/app-store-badge.png"/></a>
+    </div>
+
+    <div class="video-container">
+      <iframe class="responsive-iframe"  src="https://www.youtube.com/embed/qhpugDP6RF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <img class="apple fruits" src="./assets/apple.png"/>
     <img class="pineapple fruits" src="./assets/pineapple.png"/>
@@ -224,7 +247,7 @@
     <img class="strawberry fruits" src="./assets/strawberry.png"/>
     <!-- <img class="squash fruits" src="./assets/squash.png"/> -->
 
-    <div class="previewContainer">
+    <div class="previewContainer display-none">
       <img class="preview" src="./assets/app-preview.png" />
       <img class="preview2" src="./assets/app-preview2.png" />
     </div>
